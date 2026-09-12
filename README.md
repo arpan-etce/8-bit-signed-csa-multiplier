@@ -27,6 +27,16 @@ The design is implemented structurally using **Half Adders** and **Full Adders**
 - `testbench/tb_signed_multiplier_8bit.v` — Exhaustive verification testbench
 - `results/exhaustive_test_result.png` — Verification result
 
+  ## Architecture
+
+The multiplier consists of three main stages:
+
+1. **Partial Product Generation** — generates the partial products using the input operands.
+2. **Carry-Save Addition** — reduces the partial products using Half Adders and Full Adders while saving the carry signals.
+3. **Final Addition** — combines the remaining sum and carry terms to produce the 16-bit product.
+
+For signed multiplication, the partial products associated with the sign bits are complemented and correction bits are incorporated into the carry-save array.
+
 ## Verification
 
 The design was exhaustively tested for every possible combination of the two 8-bit signed input operands.
