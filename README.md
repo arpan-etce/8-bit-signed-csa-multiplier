@@ -37,6 +37,16 @@ The multiplier consists of three main stages:
 
 For signed multiplication, the partial products associated with the sign bits are complemented and correction bits are incorporated into the carry-save array.
 
+## How to Simulate
+
+1. Create a new project in Xilinx Vivado.
+2. Add the files from the `rtl` folder as design sources.
+3. Add `tb_signed_multiplier_8bit.v` from the `testbench` folder as a simulation source.
+4. Set `tb_signed_multiplier_8bit` as the simulation top module.
+5. Run Behavioral Simulation.
+6. The testbench checks all 65,536 possible signed input combinations.
+7. A successful simulation should report 0 errors and all 65,536 tests passed.
+   
 ## Verification
 
 The design was exhaustively tested for every possible combination of the two 8-bit signed input operands.
