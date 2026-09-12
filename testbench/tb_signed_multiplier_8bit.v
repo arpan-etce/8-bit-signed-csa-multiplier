@@ -71,10 +71,8 @@ module tb_signed_multiplier_8bit;
 
         end
 
-        // -----------------------------------------
         // Final result
-        // -----------------------------------------
-
+       
         $display("");
         $display("==============================================");
         $display("             TESTING COMPLETED");
